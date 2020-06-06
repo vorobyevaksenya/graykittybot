@@ -3,4 +3,5 @@
 __FILE__="$(readlink -e "${BASH_SOURCE[0]}")"
 __DIR__="$(dirname "${__FILE__}")"
 
-env python3 "${__DIR__}/ourbot.py"
+screen -S graykittybot -X quit
+screen -S graykittybot -dm "${__DIR__}/listen.sh"
