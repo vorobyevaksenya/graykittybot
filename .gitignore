@@ -1,0 +1,8 @@
+# Idea config directory
+/.idea
+
+# Windows thumbnail cache files
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+
