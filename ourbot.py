@@ -12,7 +12,7 @@ def handle_text_messages(message):
     elif message.text == "мяу":
         #bot.send_message(message.from_user.id, "мяу")
         bot.reply_to(message, "мяу")
-        bot.send_sticker(message.chat_id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
+        bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
 
     else:
         #bot.send_message(message.from_user.id, "Напиши 'кись' чтобы узнать как дела у серого кися")
