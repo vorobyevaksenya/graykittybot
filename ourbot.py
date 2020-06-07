@@ -7,11 +7,13 @@ bot = telebot.TeleBot('1042781969:AAH9kxoyrHi6MaXWLT3ER9d11hQmP9mJ8u8')
 
 @bot.message_handler(commands=['about_bot'])
 def about_bot(message):
-    bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися. Напиши 'спой' и прослушай песенку")
+    bot.send_message(message.chat.id, "Бот, поющий песенки про серого кися. Напиши 'спой' и прослушай песенку")
 
+@bot.message_handler(commands=['help'])
+def help_bot(message):
+    bot.send_message(message.chat.id, "Команды:\n/about_bot - о чём бот?\n\nОтветы на сообщения:\n'спой' - бот поёт рандомную песенку про кися из списка.\n'мяу' - бот мяукает в ответ.\n'миу' - бот шлёт стикер с тиграми")
 
 @bot.message_handler(content_types=['text'])
-
 def handle_text_messages(message):
 
     if re.search("спой", message.text, re.IGNORECASE):
@@ -24,8 +26,8 @@ def handle_text_messages(message):
     elif re.search("миу", message.text, re.IGNORECASE):
         #bot.send_message(message.from_user.id, "мяу")
         #bot.reply_to(message, "мяу")
-        #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
-        bot.send_voice(message.chat.id, "AwACAgIAAxkBAAIBQF7ceKypMg7g0p274vklpkb0oOAZAAJVCAAC81vhSrWrdOpc_t76GgQ")
+        bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
+        #bot.send_voice(message.chat.id, "AwACAgIAAxkBAAIBQF7ceKypMg7g0p274vklpkb0oOAZAAJVCAAC81vhSrWrdOpc_t76GgQ")
 
     #else:
         #bot.send_message(message.chat.id, "Напиши 'спой' чтобы послушать одну из песенок про серого кися")
