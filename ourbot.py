@@ -13,7 +13,7 @@ def handle_text_messages(message):
         songList = ["Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!", "почему доволен серенький кись?\nпотому что у кися есть серый мись!",
         "серый серый серый кись\nс серыми мисями\nсерый серый серый кись\nснится мне ночами"]
 
-        bot.send_message(message.chat.id, print("random item from list is: ", random.choice(songList)))
+        bot.send_message(message.chat.id, random.choice(songList))
         #bot.reply_to(message, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
     elif re.search("мяу", message.text, re.IGNORECASE):
         bot.send_message(message.chat.id, "применилась регулярка")
