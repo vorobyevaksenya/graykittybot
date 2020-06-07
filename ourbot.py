@@ -11,8 +11,9 @@ def handle_text_messages(message):
         bot.reply_to(message, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
     elif message.text == "мяу":
         #bot.send_message(message.from_user.id, "мяу")
-        bot.reply_to(message, "мяу")
-        bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
+        #bot.reply_to(message, "мяу")
+        #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
+        bot.send_voice(message.chat.id, "AwACAgIAAxkBAAIBQF7ceKypMg7g0p274vklpkb0oOAZAAJVCAAC81vhSrWrdOpc_t76GgQ")
 
     else:
         #bot.send_message(message.from_user.id, "Напиши 'кись' чтобы узнать как дела у серого кися")
