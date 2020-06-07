@@ -9,7 +9,7 @@ def handle_text_messages(message):
     if message.text == "кись":
         bot.send_message(message.chat.id, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
         #bot.reply_to(message, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
-    elif message.text == re.search("мяу", message.text, re.IGNORECASE):
+    elif re.search("мяу", message.text, re.IGNORECASE):
         bot.send_message(message.chat.id, "применилась регулярка")
     elif message.text == "миу":
         #bot.send_message(message.from_user.id, "мяу")
