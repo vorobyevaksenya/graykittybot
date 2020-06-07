@@ -23,13 +23,13 @@ def handle_text_messages(message):
         #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAALo817b0dwV_AZwTyvKYd4n5Vjv9xKKAAJ6AANb-bUSLcB_10CpHboaBA")
         bot.send_voice(message.chat.id, "AwACAgIAAxkBAAIBQF7ceKypMg7g0p274vklpkb0oOAZAAJVCAAC81vhSrWrdOpc_t76GgQ")
 
-    else:
-        bot.send_message(message.chat.id, "Напиши 'спой' чтобы послушать одну из песенок про серого кися")
+    #else:
+        #bot.send_message(message.chat.id, "Напиши 'спой' чтобы послушать одну из песенок про серого кися")
         #bot.reply_to(message, "Напиши 'кись' чтобы узнать как дела у серого кися")
 bot.polling(none_stop=True, interval=0)
 
 
 @bot.message_handler(commands=['about_bot'])
 def about_bot(message):
-    bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися")
+    bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися. Напиши 'спой' и прослушай песенку")
 bot.polling(none_stop=True, interval=0)
