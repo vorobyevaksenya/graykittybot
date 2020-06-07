@@ -22,7 +22,7 @@ def handle_text_messages(message):
         bot.send_message(message.chat.id, random.choice(songList))
         #bot.reply_to(message, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
     elif re.search("мяу", message.text, re.IGNORECASE):
-        bot.send_message(message.chat.id, "применилась регулярка")
+        bot.send_message(message.chat.id, "мяу")
     elif re.search("миу", message.text, re.IGNORECASE):
         #bot.send_message(message.from_user.id, "мяу")
         #bot.reply_to(message, "мяу")
