@@ -9,7 +9,9 @@ bot = telebot.TeleBot('1042781969:AAH9kxoyrHi6MaXWLT3ER9d11hQmP9mJ8u8')
 def about_bot(message):
     bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися. Напиши 'спой' и прослушай песенку")
 
-@bot.message_handler(content_types=['text']
+
+@bot.message_handler(content_types=['text'])
+
 def handle_text_messages(message):
 
     if re.search("спой", message.text, re.IGNORECASE):
