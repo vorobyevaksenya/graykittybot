@@ -4,15 +4,17 @@ import random
 
 bot = telebot.TeleBot('1042781969:AAH9kxoyrHi6MaXWLT3ER9d11hQmP9mJ8u8')
 
-@bot.message_handler(content_types=['text'])
 
+@bot.message_handler(commands=['about_bot'])
+def about_bot(message):
+    bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися. Напиши 'спой' и прослушай песенку")
+
+@bot.message_handler(content_types=['text']
 def handle_text_messages(message):
 
     if re.search("спой", message.text, re.IGNORECASE):
-
         songList = ["Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!", "почему доволен серенький кись?\nпотому что у кися есть серый мись!",
         "серый серый серый кись\nс серыми мисями\nсерый серый серый кись\nснится мне ночами"]
-
         bot.send_message(message.chat.id, random.choice(songList))
         #bot.reply_to(message, "Серый-серый-серый-серый-серенький Кись!\nУ него всё очень-очень хорошо!")
     elif re.search("мяу", message.text, re.IGNORECASE):
@@ -27,9 +29,5 @@ def handle_text_messages(message):
         #bot.send_message(message.chat.id, "Напиши 'спой' чтобы послушать одну из песенок про серого кися")
         #bot.reply_to(message, "Напиши 'кись' чтобы узнать как дела у серого кися")
 
-
-@bot.message_handler(commands=['about_bot'])
-def about_bot(message):
-    bot.send_message(message.chat.id, "Я создала этого бота, чтобы Лехе не было грустненько, и он мог прослушать песенки про серого кися. Напиши 'спой' и прослушай песенку")
 
 bot.polling(none_stop=True, interval=0)
